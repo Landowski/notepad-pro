@@ -22,13 +22,13 @@
         let priceId;
 
         if (currency === 'BRL') {
-            priceId = 'price_1RzHn8JVDeGOx1BEe0k6gPVW';
+            priceId = 'price_1RzMZRJVDeGOx1BEl6qoXheH';
         } else {
-            priceId = 'price_1RzHmHJVDeGOx1BEBbpdI78W';
+            priceId = 'price_1RzMZRJVDeGOx1BEkg2SaX1X';
         }
 
         function redirectToStripeCheckout(email) {
-            const stripe = Stripe('pk_test_51H8nFSJVDeGOx1BE0FnEeujSVTeUTzELHWZareDBpG9Bb4vt9djXeMHIVlpPe3dTMpfBBEF75zWOpb5STqNUYXUJ00FykAJCjp');
+            const stripe = Stripe('pk_live_51H8nFSJVDeGOx1BERkH0kcptYEKgHkWiEn5RSqR3GIUabD6qWrzGEmyBX0bNUChuFvn2iBAtcqLSpc5bxx6DcOUy00aCMvsafk');
             stripe.redirectToCheckout({
                 lineItems: [{ price: priceId, quantity: 1 }],
                 mode: 'subscription',
