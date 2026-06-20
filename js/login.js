@@ -60,7 +60,7 @@
 
     firebase.auth().onAuthStateChanged((user) => {
       if (user && !isCreatingAccount) {
-        setTimeout(() => { window.location.href = '/'; }, 100);
+        setTimeout(() => { window.location.href = 'https://landowski.github.io/notepad-pro/'; }, 100);
       }
     });
 
@@ -122,7 +122,7 @@
           btn.disabled = true;
           btn.innerHTML = '<img src="img/loading.svg" width="18" height="18"/>';
           btn.style.cursor = 'auto';
-          setTimeout(() => { window.location.href = '/'; }, 1500);
+          setTimeout(() => { window.location.href = 'https://landowski.github.io/notepad-pro/'; }, 1500);
         })
         .catch((error) => {
           isCreatingAccount = false;
@@ -148,7 +148,7 @@
         .then((user) => {
           return firebase.firestore().collection('users').doc(user.uid).collection('categories').add({ name: 'Main', protected: true }).then(() => user);
         })
-        .then(() => { setTimeout(() => { window.location.href = '/'; }, 1500); })
+        .then(() => { setTimeout(() => { window.location.href = 'https://landowski.github.io/notepad-pro/'; }, 1500); })
         .catch((error) => {
           isCreatingAccount = false;
           if (error.code === 'auth/email-already-in-use') toast(t('emailRegistrado'));
