@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – Notepad PRO</title>
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div class="lang-selector">
+    <select id="langSelect"></select>
+  </div>
+  <div id="content">
+    <div class="wrapper-login">
+      <div class="container-login">
+        <div style="display: flex; width: 100%; height: fit-content; justify-content: center; margin-bottom: 20px;">
+          <span style="font-family: 'Oxanium'; font-size: 27px; font-weight: 700;">Notepad PRO</span>
+        </div>
+        <div id="popLogin">
+          <div class="box">
+            <div class="login-container">
+              <form id="login-form">
+                <input class="input-login" type="email" id="login-email" placeholder="E-mail" required>
+                <div class="pass-group">
+                  <input class="input-login" type="password" id="login-password" placeholder="" required>
+                  <div id="btnToggle" class="toggle"><i class="fa-regular fa-eye fa-lg"></i></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 13px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <span id="textoEsqueci" style="color: #757575;"></span>
+                  <span id="linkEsqueci"></span>
+                </div>
+                <button type="submit" id="botaoLogin"></button>
+              </form>
+            </div>
+          </div>
+          <div style="width: 100%; text-align: center;"><span id="semConta"></span> <span id="linkLogin"></span></div>
+        </div>
+        <div id="popSignUp" style="display: none !important;">
+          <div class="box">
+            <div class="login-container">
+              <form id="login-form-sign-up">
+                <input class="input-login" type="email" id="signup-email" placeholder="E-mail" required>
+                <div class="pass-group">
+                  <input class="input-login" type="password" id="signup-password" placeholder="" required>
+                  <div id="btnToggleSign" class="toggle"><i class="fa-regular fa-eye fa-lg"></i></div>
+                </div>
+                <input class="input-login" type="password" id="signup-password-verify" placeholder="" required>
+                <button type="submit" id="botaoCadastro"></button>
+              </form>
+            </div>
+          </div>
+          <div style="width: 100%; text-align: center;"><span id="temConta"></span> <span id="linkSignUp"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="firebase/firebase-app.js"></script>
+  <script src="firebase/firebase-auth.js"></script>
+  <script src="firebase/firebase-firestore.js"></script>
+  <script src="firebase/firebase-config.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

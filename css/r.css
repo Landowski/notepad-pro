@@ -1,0 +1,114 @@
+@font-face {
+font-family: 'Roboto';
+src: url('/font/Roboto-Regular.ttf');
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'Roboto';
+src: url('/font/Roboto-Bold.ttf');
+font-weight: 700;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "Roboto", sans-serif;
+background-color: #f9f9f9;
+color: #262626 !important;
+line-height: 1.4;
+padding: 0;
+margin: 0;
+}
+
+.container {
+max-width: 800px;
+margin: 30px auto;
+background: white;
+box-shadow: 0 0 5px rgba(0,0,0,0.25);
+}
+
+.content {
+padding: 60px 50px;
+}
+
+.note-title {
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 30px;
+border: none;
+background: none;
+word-wrap: break-word;
+}
+
+.note-text {
+font-size: 15px;
+word-wrap: break-word;
+white-space: pre-wrap;
+}
+
+.note-text ul, .note-text ol {
+margin: 12px 0;
+padding-left: 24px;
+}
+
+.note-text li {
+margin-bottom: 6px;
+}
+
+.note-text a {
+color: #3383ff;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: border-color 0.2s;
+}
+
+.note-text a:hover {
+border-bottom-color: #3383ff;
+}
+
+.note-text strong {
+font-weight: 700;
+}
+
+.note-text em {
+font-style: italic;
+}
+
+.note-text input[type="checkbox"] {
+margin-right: 8px;
+margin-bottom: 2px;
+vertical-align: middle;
+pointer-events: none;
+}
+
+.loading {
+text-align: center;
+padding: 60px 30px;
+color: #666;
+}
+
+.error {
+text-align: center;
+padding: 60px 30px;
+color: #e74c3c;
+}
+
+.spinner {
+width: 24px;
+height: 24px;
+margin: 0 auto 20px;
+}
+
+.spinner svg {
+animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}

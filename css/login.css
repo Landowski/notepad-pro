@@ -1,0 +1,35 @@
+@font-face { font-family: 'Oxanium'; src: url('../font/Oxanium-Regular.ttf'); font-weight: 400; }
+    @font-face { font-family: 'Oxanium'; src: url('../font/Oxanium-Bold.ttf'); font-weight: 700; }
+    @font-face { font-family: 'Roboto'; src: url('../font/Roboto-Regular.ttf'); font-weight: 400; }
+    @font-face { font-family: 'Roboto'; src: url('../font/Roboto-Bold.ttf'); font-weight: 700; }
+    :root { --font: "Roboto", sans-serif; --main: #3383ff; --main-dark: #0d6cff; --black: #262626; }
+    * { box-sizing: border-box; transition: all 0.2s ease-in-out; }
+    p { margin: 0; }
+    html, body { margin: 0; padding: 0; width: 100%; min-height: 100vh; font-family: var(--font); font-size: 15px; background-color: #f5f5f5; }
+    #content { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .wrapper-login { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+    .container-login { width: 380px; max-width: 100%; height: auto; display: flex; flex-direction: column; }
+    #popLogin, #popSignUp { display: flex; flex-direction: column; gap: 20px; }
+    .box { display: flex; flex-direction: column; background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); gap: 20px; }
+    #login-form, #login-form-sign-up { display: flex; width: 100%; flex-direction: column; gap: 20px; }
+    .login-container button { width: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font); font-size: 14px; cursor: pointer; background-color: var(--main); border: none; padding: 8px; border-radius: 5px; color: #fff; letter-spacing: 1px; font-weight: 700; }
+    .login-container button:hover { background-color: var(--main-dark); }
+    .input-login { width: 100%; border: 1px solid #ddd; border-radius: 5px; background-color: #fff; padding: 8px; outline: none; font-family: var(--font); font-weight: 300; font-size: 14px; color: #4f3f3f; }
+    .input-login:hover, .input-login:focus { border-color: var(--main); }
+    .input-login::placeholder { color: #aaa; }
+    .input-login:focus::placeholder { color: transparent; }
+    #linkLogin, #linkSignUp, #linkEsqueci { color: var(--main); text-decoration: none; cursor: pointer; font-weight: 700; }
+    #linkLogin:hover, #linkSignUp:hover, #linkEsqueci:hover { color: var(--main-dark); text-decoration: underline; }
+    .pass-group { position: relative; }
+    .toggle { cursor: pointer; display: flex; align-items: center; justify-content: center; width: fit-content; position: absolute; z-index: 9999; top: 18px; right: 8px; color: #999; transform: translateY(-50%); }
+    .toggle:hover { color: var(--main-dark); }
+    input[type="password"]::-ms-reveal { display: none; }
+    #noti { visibility: hidden; width: max-content; max-width: 90vw; text-align: center; border-radius: 5px; padding: 12px 15px; user-select: none; position: fixed; z-index: 9999999 !important; font-family: var(--font); display: flex; align-items: center; justify-content: center; line-height: 1.4; font-size: 15px; background-color: #444; color: #fff; bottom: 0px; left: 50%; transform: translate(-50%, -50%); opacity: 0; animation: slideIn .3s forwards; }
+    #noti.show { box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px 0px; visibility: visible; opacity: 1; }
+    @keyframes slideIn { from { bottom: -200px; opacity: 0; } to { bottom: 20px; opacity: 1; } }
+    .fadeOutLeft { animation-name: fadeOutLeft; animation-duration: 0.7s; animation-fill-mode: both; }
+    @keyframes fadeOutLeft { 0% { opacity: 1; } 100% { opacity: 0; transform: translate3d(-100%, 0, 0); } }
+    .fadeInRight { animation-name: fadeInRight; animation-duration: 0.7s; animation-fill-mode: both; }
+    @keyframes fadeInRight { 0% { opacity: 0; transform: translate3d(-100%, 0, 0); } 100% { opacity: 1; transform: none; } }
+    .lang-selector { position: fixed; top: 10px; right: 10px; font-family: var(--font); font-size: 13px; }
+    .lang-selector select { border: 1px solid #ddd; border-radius: 5px; padding: 4px 6px; background: #fff; cursor: pointer; color: #555; }
