@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         errorElement.textContent = 'No note ID was given.';
         }
     } else {
-        window.location.href = '../login.html';
+        window.location.href = 'login.html';
     }
     });
 });
